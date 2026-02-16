@@ -43,26 +43,6 @@ disinherit_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
-		trigger_if = {
-			limit = {
-				NOT = { # in such cases, it will be free so no need to check for Renown
-					scope:recipient = {
-						OR = {
-							has_trait = disputed_heritage
-							any_secret = {
-								type = secret_disputed_heritage
-								is_known_by = scope:actor
-							}
-							has_trait = bastard
-						}
-					}
-				}
-			}
-			scope:actor.dynasty = {
-				dynasty_prestige >= medium_dynasty_prestige_value
-			}
-		}
-
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
 		trigger_if = {
 			limit = {
@@ -347,9 +327,6 @@ disinherit_children_interaction = {
 	}
 
 	is_valid_showing_failures_only = {
-		scope:actor = {
-			prestige >= major_prestige_value
-		}
 		scope:recipient = { NOT = { has_strong_hook = scope:actor } }
 		trigger_if = {
 			limit = {
