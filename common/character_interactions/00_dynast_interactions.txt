@@ -22,7 +22,7 @@ disinherit_interaction = {
 		}
 
 		scope:actor = {
-			is_dynast = yes
+			is_dynast = no
 			dynasty = scope:recipient.dynasty
 
 		}
